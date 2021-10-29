@@ -39,7 +39,7 @@ const Card = (article) => {
   headline.textContent = article.headline;
   author.classList.add("author");
   imgContainer.classList.add("img-container");
-  img.src = article.imgURL;
+  img.src = article.authorPhoto;
   authorName.textContent = `By ${article.authorName}`;
 
   return card;
@@ -61,16 +61,13 @@ const cardAppender = (selector) => {
   axios.get("http://localhost:5000/api/articles")
   .then(res => {
     console.log(res.data);
-    for(let i = 0; i < res.data.articles.length; i++){
-      const articleObj = {
-        authorName: authorName,
-        authorPhoto: authorPhoto,
-        headline: headline
-      }
-    }
-    const cardNew = Card(articleObj);
-    cardsContainer.appendChild(cardNew);
+    Object.values(res.data.articles).forEach(item => {
+      item.forEach(item => {
+        cardsContainer.appendChild(Card(item));     
+      })
+    })
   })
+
   .catch(err =>{
     console.error(err);
   })
