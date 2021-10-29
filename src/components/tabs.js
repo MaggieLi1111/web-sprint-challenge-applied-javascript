@@ -49,6 +49,6 @@ const tabsAppender = (selector) => {
 }
 
 
-tabsAppender(".tabs-container");
+// tabsAppender(".tabs-container");
 
 export { Tabs, tabsAppender }

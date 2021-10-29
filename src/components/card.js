@@ -74,6 +74,6 @@ const cardAppender = (selector) => {
   
 }
 
-cardAppender(".cards-container");
+// cardAppender(".cards-container");
 
 export { Card, cardAppender }

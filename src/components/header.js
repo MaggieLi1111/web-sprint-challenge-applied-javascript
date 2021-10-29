@@ -1,3 +1,4 @@
+
 const Header = (title, date, temp) => {
   // TASK 1
   // ---------------------
@@ -46,8 +47,8 @@ const headerAppender = (selector) => {
   headerContainer.appendChild(headerExample);
 
   }
-  
-headerAppender(".header-container");
+
+  // headerAppender(".header-container");
 
 
 export { Header, headerAppender }
