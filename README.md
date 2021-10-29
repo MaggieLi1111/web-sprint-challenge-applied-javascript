@@ -60,7 +60,30 @@ In meeting the minimum viable product (MVP) specifications listed below, your pr
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. You might prepare by writing down your own answers before hand.
 
 1. What is the DOM?
+Document Object Model. 
+It provides the interface that code can manipulate the webpage. 
+When the web page is loaded into a browser, the browser first looks for the HTML file. 
+Next, the browser uses the HTML file as a blueprint or instructions on building the page (this coupled with the CSS file later). 
+Finally, the browser parses these instructions and builds a model for the page's look and act using Javascript. 
+This model is a Javascript Object containing every element in order on the page.
+
 2. What is an event?
+Events are actions or occurences that happen in the system when programming.
+ which the system tells you about so you can respond to them in some way if desired. 
+ For example, click button, moving the mouse, scroll, press key, drag and drop, zoom, or any number of user interactions. Every user interaction with a site is an event.
+
 3. What is an event listener?
+An event listener is a procedure or a funciton in a computer program that waits for an event to occur. 
+For example, when the user click or move the mouse, press a key on the keyboard, disk I/O, network activity, or an internal timer or interrupt. 
+The listener is programmed to react to an input or signal by calling the event's handler.
+
 4. Why would we convert a NodeList into an Array?
+Nodelist are collections of nodes, usually returned by properties such as Node.childNodes and methods such as document.querySelectorArr(); 
+Nodelist is not an array, just array-like object, it is impossible to iterate over it with forEach(). This means that if you pass a NodeList where you expect an Array it'll probably work unless you used one of the Array methods which will fail. 
+Browsers can implement NodeList under the hood however they like. Document.querySelectorAll can return a lightly wrapped internal data structure instead of marshalling to a JavaScript array. 
+This could save a lot of copying and makes it easier to maintain a "live" NodeList that updates as the DOM changes. 
+If you're returning or passing on a node list to other parts of your code because programmers likely expect arrays so exposing a non-array could cause subtle bugs.
+
 5. What is a component?
+Components are small reusable pieces of code that can be used to build elements sharing functionality and styling. 
+A Component comprises several parts: HTML, CSS, or Javascript brought together as a combination building blocks in a website or application. 
